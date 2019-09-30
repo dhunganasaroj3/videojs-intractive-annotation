@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>videojs-overlay Demo</title>
+    <link href='https://vjs.zencdn.net/7.6.0/video-js.css' rel=stylesheet>
+    <link href="compiled.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-overlay/1.1.4/videojs-overlay.css" rel="stylesheet">
+</head>
+<body>
+<div id="result-data">
+<video id="videojs-overlay-player" class="video-js vjs-default-skin size" height="500" width="1200" controls>
+    <source src='https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8'>
+</video>
+</div>
+<script src="./videojs.js"></script>
+<script src="./videojs-overlay.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js"></script>
+<script type="module" src="index.js"></script>
+<script type="module" src="annotation_plugin.js"></script>
+<script src="handlerFile.js"></script>
+<script>
+  // (function(window, videojs) {
+  //   var player = window.player = videojs('videojs-overlay-player');
+  //   player.overlay({
+  //     overlays: [ {
+  //       content: `<h1>Do you love this video?</h1></br><button class="button__style__green" onClick="test('yes')">Yes</button><button class="button__style__red" onClick="test('No')">No</button>`,
+  //       start: 'pause',
+  //       end: 500000,
+  //       align: 'top'
+  //     }]
+  //   });
+  // }(window, window.videojs));
+</script>
+</body>
+</html>
