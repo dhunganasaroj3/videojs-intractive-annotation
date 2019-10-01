@@ -16,6 +16,10 @@ function collectInfo(question, answer, index){
         }
     };
 
+    callSetInterVal(playerObj)
+}
+
+function callSetInterVal(playerObj){
     setInterval(() => {
         if(playerObj.currentTime() === playerObj.duration() && flag)
             showResult();
@@ -27,10 +31,12 @@ function showResult(){
     flag = false;
         let data = document.getElementById('result-data');
         Object.keys(resultObj).map((each, index) => {
-            console.log(each, '<<<<<<<each', resultObj, '<<<<<<<<<<<<resultObj');
-            outputResult += `<h1>${index + 1}. ${resultObj[each].question}</h1><br/><h3>• ${resultObj[each].answer}</h3><br/>`;
-            console.log(outputResult, '<<<<<<<<<<<outputResult')
+            outputResult += concatString(each, index);
         });
 
         data.innerHTML = outputResult;
+}
+
+function concatString(each, index){
+    return `<h1>${index + 1}. ${resultObj[each].question}</h1><br/><h3>• ${resultObj[each].answer}</h3><br/>`
 }
